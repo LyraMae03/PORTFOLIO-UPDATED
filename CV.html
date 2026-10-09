@@ -1,0 +1,370 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyra Mae G. Borling - Resume</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 25px 15px;
+            background: #eeeeee;
+            color: #111;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            line-height: 1.50;
+        }
+
+        /* Download button */
+        .download-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .download-btn {
+            background: #333333;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 22px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .download-btn:hover {
+            background: #555555;
+        }
+
+        .resume {
+            width: 210mm;
+            min-height: 100mm;
+            margin: auto;
+            padding: 15mm 17mm;
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        header h1 {
+            margin: 0 0 3px;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .headline {
+            font-size: 9px;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+
+        .contact {
+            font-size: 8.5px;
+            line-height: 1.4;
+        }
+
+        .contact a {
+            color: #111;
+            text-decoration: none;
+        }
+
+        section {
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-bottom: 1px solid #111;
+            padding-bottom: 2px;
+            margin: 0 0 4px;
+        }
+
+        p {
+            margin: 0 0 3px;
+        }
+
+        .skill-group {
+            margin-bottom: 1px;
+        }
+
+        .project {
+            margin-bottom: 8px;
+        }
+
+        .project-title {
+            font-weight: bold;
+            margin-bottom: 1px;
+        }
+
+        .tech-stack {
+            font-size: 8.5px;
+            margin-bottom: 2px;
+        }
+
+        ul {
+            margin: 2px 0 0;
+            padding-left: 17px;
+        }
+
+        li {
+            padding-left: 0;
+            margin-bottom: 1px;
+        }
+
+        .job-title,
+        .degree-title {
+            font-weight: bold;
+            margin-bottom: 1px;
+        }
+
+        .date {
+            margin-bottom: 2px;
+        }
+
+        .education,
+        .experience-item {
+            margin-bottom: 5px;
+        }
+
+        .pending {
+            font-style: italic;
+        }
+
+        @media screen and (max-width: 750px) {
+            body {
+                padding: 15px 0;
+                overflow-x: auto;
+            }
+
+            .resume {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+
+        /* A4 PDF printing settings */
+        
+@page {
+    size: A4 portrait;
+    margin: 0;
+}
+
+@media print {
+    html,
+    body {
+        width: 210mm;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: #ffffff;
+    }
+
+    .download-container {
+        display: none !important;
+    }
+
+    .resume {
+        width: 210mm !important;
+        height: 100mm !important;
+        min-height: 100mm !important;
+        overflow: visible !important;
+        margin: 0 !important;
+        padding: 15mm 17mm !important;
+        box-shadow: none !important;
+    }
+}
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="download-container">
+        <button class="download-btn" onclick="downloadPDF()">
+            ↓ Download Resume as PDF
+        </button>
+    </div>
+
+    <main class="resume" id="resume">
+
+        <header>
+            <h1>LYRA MAE G. BORLING</h1>
+
+            <div class="headline">
+                Junior Web Developer | Full-Stack Developer | Software Developer
+            </div>
+
+            <div class="contact">
+                <a href="mailto:lyraborling03@gmail.com">
+                    lyraborling03@gmail.com
+                </a>
+                |
+                <a href="tel:+639484805480">
+                    +639484805480
+                </a>
+                | Antipolo City, Philippines
+            </div>
+        </header>
+
+        <section>
+            <h2 class="section-title">Professional Summary</h2>
+            <p>
+                BS Information Technology graduate with experience developing
+                web-based applications using React, Node.js/Express, and MySQL.
+                Experienced in database integration, user access control, and
+                rule-based system functionality. Seeking an entry-level Web
+                Developer or Junior Software Developer position.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="section-title">Technical Skills</h2>
+
+            <p class="skill-group">
+                <strong>Frontend:</strong> HTML + CSS + JavaScript + React + Vite
+            </p>
+            <p class="skill-group">
+                <strong>Backend:</strong> Node.js + Express.js
+            </p>
+            <p class="skill-group">
+                <strong>Database:</strong> MySQL + SQL + Database Design
+            </p>
+            <p class="skill-group">
+                <strong>Development Tools:</strong> Git + GitHub + VS Code + XAMPP
+            </p>
+            <p class="skill-group">
+                <strong>Other:</strong> REST API Development + User Roles &amp;
+                Access Control + Rule-Based Calculations
+            </p>
+        </section>
+
+        <section>
+            <h2 class="section-title">Projects</h2>
+
+            <div class="project">
+                <div class="project-title">
+                    Human Resource Information System with Payroll Management
+                </div>
+
+                <div class="tech-stack">
+                    React + Node.js/Express + MySQL
+                </div>
+
+                <ul>
+                    <li>
+                        Developed a web-based Human Resource Information System
+                        with an integrated Payroll Management module.
+                    </li>
+                    <li>
+                        Implemented rule-based payroll calculations and payroll processing.
+                    </li>
+                    <li>
+                        Designed and integrated MySQL database structures for system data.
+                    </li>
+                    <li>
+                        Developed user roles and access control features.
+                    </li>
+                    <li>
+                        Built frontend components using React and backend functionality
+                        using Node.js and Express.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <div class="project-title">
+                    Barangay Records Management System
+                </div>
+
+                <div class="tech-stack">
+                    React + Node.js/Express + MySQL
+                </div>
+
+                <ul>
+                    <li>
+                        Developed a web-based system for managing resident records,
+                        certificates, reports, and users.
+                    </li>
+                    <li>Built user interfaces using React.</li>
+                    <li>Developed backend functionality using Node.js and Express.</li>
+                    <li>Integrated MySQL for storing and managing application data.</li>
+                    <li>Implemented system features for managing records and user access.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Experience</h2>
+
+            <div class="experience-item">
+                <div class="job-title">IT Support Intern / OJT</div>
+
+                <div>
+                    Department of Public Works and Highways – National Capital Region
+                    (DPWH-NCR)
+                </div>
+
+                <div class="date">ICT Unit / IT Support Section | 2026</div>
+
+                <ul>
+                    <li>
+                        Assisted with computer maintenance, software installation,
+                        hardware troubleshooting, IT equipment inventory, and basic
+                        network and cabling setup.
+                    </li>
+                    <li>
+                        Gained practical experience supporting users and maintaining
+                        computer-related operations in a government ICT environment.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Education</h2>
+
+            <div class="education">
+                <div class="degree-title">
+                    Bachelor of Science in Information Technology
+                </div>
+                <div>
+                    Eulogio "Amang" Rodriguez Institute of Science and Technology
+                    (EARIST) | 2026
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Certificates &amp; Training</h2>
+
+            <p><strong>Computer Hardware Basics</strong> – Cisco | 2026</p>
+            <p><strong>Operating System Basics</strong> – Cisco | 2026</p>
+            <p><strong>Embedded Systems for Beginners</strong> – Akunji Projects | 2025</p>
+            <p><strong>Web Development using PHP and MySQL</strong> – DICT Pampanga Provincial Office | 2026</p>
+            <p><strong>Web Development using MERN</strong> – DICT Pampanga Provincial Office | 2026</p>
+            <p><strong>Computer Systems Servicing (CSS) NC II</strong> – TESDA | 2026</p>
+            <p class="pending">Preparing for Assessment</p>
+        </section>
+
+    </main>
+
+    <script>
+        function downloadPDF() {
+            window.print();
+        }
+    </script>
+
+</body>
+</html>
