@@ -433,11 +433,6 @@ const barangayImages = [
         title: "Users Page",
         description: "The Users page on the sidebar allows administrators to manage system accounts by viewing a complete list of users showing their username, name, role such as ADMIN, CHAIRMAN, or STAFF, and creation date while providing individual edit and delete action buttons alongside an add user button at the top right to easily register new system users."
     },
-    {
-        image: "images/PALAWAN.png",
-        title: "Users Page",
-        description: "The Users page on the sidebar allows administrators to manage system accounts by viewing a complete list of users showing their username, name, role such as ADMIN, CHAIRMAN, or STAFF, and creation date while providing individual edit and delete action buttons alongside an add user button at the top right to easily register new system users."
-    },
 ];
 
 // ==============================
