@@ -515,5 +515,129 @@ if (document.readyState === "loading") {
 }
 
 
+ 
+const certificateModal = document.getElementById("certificateModal");
+const certificateModalImage = document.getElementById("certificateModalImage");
+const certificateModalTitle = document.getElementById("certificateModalTitle");
+const closeCertificateModal = document.getElementById("closeCertificateModal");
+
+if (certificateModal && certificateModalImage &&
+    certificateModalTitle && closeCertificateModal) {
+
+    // Ilipat ang modal sa body para hindi maapektuhan ng book layout
+    document.body.appendChild(certificateModal);
+
+    const certificateBox =
+        certificateModal.querySelector(".certificate-modal-box");
+
+    // Buksan ang tamang certificate
+    document.querySelectorAll(
+        "#certificates-content .certificate-card"
+    ).forEach(card => {
+
+        const image = card.querySelector(".certificate-image img");
+        const link = card.querySelector(".certificate-info a");
+        const title = card.querySelector(".certificate-info h3");
+
+        function openCertificate(event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            // Kunin ang image ng mismong card na pinindot
+            certificateModalImage.src = image.src;
+            certificateModalImage.alt = image.alt || "Certificate";
+
+            certificateModalTitle.textContent =
+                title ? title.textContent.trim() : "Certificate";
+
+            // I-reset ang scroll kapag ibang certificate ang binuksan
+            if (certificateBox) {
+                certificateBox.scrollTop = 0;
+            }
+
+            // Ipakita ang modal
+            certificateModal.classList.add("active");
+            document.body.style.overflow = "hidden";
+        }
+
+        image.addEventListener("click", openCertificate);
+
+        if (link) {
+            link.addEventListener("click", openCertificate);
+        }
+    });
+
+    // Isara ang modal at linisin ang image
+    function closeCertificate() {
+        certificateModal.classList.remove("active");
+        certificateModalImage.removeAttribute("src");
+        document.body.style.overflow = "";
+    }
+
+    closeCertificateModal.addEventListener(
+        "click",
+        closeCertificate
+    );
+
+    // Isara kapag sa labas ng modal box nag-click
+    certificateModal.addEventListener("click", function(event) {
+        if (event.target === certificateModal) {
+            closeCertificate();
+        }
+    });
+
+    // Isara gamit ang ESC
+    document.addEventListener("keydown", function(event) {
+        if (
+            event.key === "Escape" &&
+            certificateModal.classList.contains("active")
+        ) {
+            closeCertificate();
+        }
+    });
+}
+
+
+/* ===== PORTFOLIO DARK MODE ===== */
+(function () {
+    const toggle = document.getElementById("themeToggle");
+
+    if (!toggle) return;
+
+    const icon = toggle.querySelector("i");
+    const savedTheme = localStorage.getItem("portfolioTheme");
+
+    function applyTheme(isDark) {
+        document.body.classList.toggle("dark-mode", isDark);
+
+        if (icon) {
+            icon.classList.toggle("fa-moon", !isDark);
+            icon.classList.toggle("fa-sun", isDark);
+        }
+
+        toggle.setAttribute(
+            "aria-label",
+            isDark ? "Switch to light mode" : "Switch to dark mode"
+        );
+
+        toggle.title = isDark
+            ? "Switch to light mode"
+            : "Switch to dark mode";
+    }
+
+    applyTheme(savedTheme === "dark");
+
+    toggle.addEventListener("click", function () {
+        const isDark = !document.body.classList.contains("dark-mode");
+
+        applyTheme(isDark);
+        localStorage.setItem(
+            "portfolioTheme",
+            isDark ? "dark" : "light"
+        );
+    });
+})();
+
+
 
 typeEffect();

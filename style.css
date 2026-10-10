@@ -1464,3 +1464,395 @@ body:not(.modal-open) #projectModal {
         width: 100%;
     }
 }
+
+/* CERTIFICATE MODAL */
+.certificate-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.certificate-modal.active {
+    display: flex;
+}
+
+.certificate-modal-box {
+    position: relative;
+    width: fit-content;
+    max-width: min(700px, 90vw);
+    max-height: 85vh;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: white;
+    border: 1px solid rgba(255, 105, 180, 0.4);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.certificate-modal-box img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 62vh;
+    object-fit: contain;
+    margin: 25px auto 10px;
+    cursor: default;
+}
+
+.certificate-modal-box h3 {
+    color: #17151f;
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 10px 0 5px;
+    overflow-wrap: anywhere;
+}
+
+.certificate-modal-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+    background: #ff69b4;
+    color: white;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.certificate-modal-close:hover {
+    background: #e754a3;
+}
+
+@media (max-width: 600px) {
+    .certificate-modal {
+        padding: 10px;
+    }
+
+    .certificate-modal-box {
+        width: 100%;
+        max-width: 95vw;
+        max-height: 88vh;
+        padding: 12px;
+    }
+
+    .certificate-modal-box img {
+        max-width: 100%;
+        max-height: 65vh;
+    }
+
+    .certificate-modal-box h3 {
+        font-size: 14px;
+    }
+}
+
+
+/* ===== DARK MODE TOGGLE BUTTON ===== */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.theme-toggle {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(243, 193, 204, 0.7);
+    border-radius: 50%;
+    background: transparent;
+    color: #d982a0;
+    font-size: 17px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+
+.theme-toggle:hover {
+    background: #f3c1cc;
+    color: #29202a;
+    transform: rotate(15deg);
+}
+
+/* ===== DARK THEME ===== */
+
+body.dark-mode {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    color: #eee8f2;
+
+    /* Override the original gradients */
+    background: #17151f !important;
+    background-image: none !important;
+    background-attachment: fixed;
+
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+
+body.dark-mode nav {
+    background-color: rgba(23, 21, 31, 0.96);
+    border-color: rgba(243, 193, 204, 0.2);
+}
+
+body.dark-mode nav a {
+    color: #eee8f2;
+}
+
+body.dark-mode nav a:hover,
+body.dark-mode nav .logo span {
+    color: #f3a9c4;
+}
+
+body.dark-mode .theme-toggle {
+    color: #f3c1cc;
+    background: #302638;
+}
+
+body.dark-mode .hero,
+body.dark-mode #about,
+body.dark-mode #skills,
+body.dark-mode #portfolio,
+body.dark-mode #contact {
+    color: #eee8f2;
+}
+
+body.dark-mode .section-title,
+body.dark-mode .hero h1,
+body.dark-mode .hero h2,
+body.dark-mode .about-text,
+body.dark-mode .portfolio-info h3,
+body.dark-mode .portfolio-info p,
+body.dark-mode .certificate-info h3,
+body.dark-mode .certificate-info p {
+    color: #eee8f2;
+}
+
+body.dark-mode .skill,
+body.dark-mode .portfolio-page,
+body.dark-mode .certificate-card {
+    background: #252130;
+    color: #eee8f2;
+    border-color: rgba(243, 193, 204, 0.2);
+}
+
+body.dark-mode .skill-level,
+body.dark-mode .certificate-info a {
+    color: #f3b5cc;
+}
+
+body.dark-mode .skill-bar {
+    background: #403649;
+}
+
+body.dark-mode .portfolio-tabs .portfolio-tab {
+    color: #eee8f2;
+}
+
+body.dark-mode .portfolio-tabs .portfolio-tab.active {
+    background: #d982a0;
+    color: #211923;
+}
+
+body.dark-mode .tech-tags span {
+    background: #403044;
+    color: #f5c4d6;
+}
+
+body.dark-mode .view-demo-btn,
+body.dark-mode .btn-contact {
+    background: #d982a0;
+    color: #211923;
+}
+
+body.dark-mode #contact input,
+body.dark-mode #contact textarea {
+    background: #252130;
+    color: #eee8f2;
+    border: 1px solid #514357;
+}
+
+body.dark-mode #contact input::placeholder,
+body.dark-mode #contact textarea::placeholder {
+    color: #c0b3c7;
+}
+
+/* Modal colors */
+body.dark-mode .certificate-modal,
+body.dark-mode .project-modal {
+    background: rgba(0, 0, 0, 0.88);
+}
+
+body.dark-mode .certificate-modal-box,
+body.dark-mode .project-modal-box {
+    background: #252130;
+    color: #eee8f2;
+    border: 1px solid rgba(243, 193, 204, 0.25);
+}
+
+body.dark-mode .certificate-modal-box h3,
+body.dark-mode .image-caption h3,
+body.dark-mode .image-caption p {
+    color: #17151f;
+}
+
+/* About Me paragraph - Dark Mode */
+body.dark-mode #about p {
+    color: #ffffff !important;
+}
+
+body.dark-mode #portfolioContent {
+    background: #17151f !important;
+}
+
+body.dark-mode .background-decoration .pink-blob {
+    opacity: 0.12;
+}
+
+body.dark-mode .background-decoration .sparkle {
+    color: #f3c1cc;
+    opacity: 0.35;
+}
+
+
+/* Social Icons - Dark Mode */
+body.dark-mode .social-icons a {
+    color: #ffffff !important;
+    border-color: #f3a6c3;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .social-icons a:hover {
+    color: #ffb6d5 !important;
+    border-color: #ffb6d5;
+    
+}
+
+
+/* Keep the dark theme usable on phones */
+@media (max-width: 600px) {
+    .nav-links {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .theme-toggle {
+        width: 34px;
+        height: 34px;
+    }
+}
+
+
+
+
+/* ===== FINAL SPARKLE FIX ===== */
+
+.background-decoration {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Keep the portfolio content visible above background */
+#portfolioContent {
+    position: relative;
+    z-index: 1;
+}
+
+/* Sparkles in light mode and dark mode */
+.background-decoration .sparkle {
+    display: block;
+    position: absolute;
+    color: #e879a9;
+    pointer-events: none;
+    opacity: 0.7;
+    text-shadow:
+        0 0 8px rgba(255, 143, 200, 0.9),
+        0 0 18px rgba(232, 121, 169, 0.65);
+    animation: sparkleFloat 3s ease-in-out infinite;
+}
+
+/* Brighter pink glow in dark mode */
+body.dark-mode .background-decoration .sparkle {
+    color: #ffc4e0 !important;
+    text-shadow:
+        0 0 8px #ff8fc8,
+        0 0 20px rgba(255, 143, 200, 0.8);
+    opacity: 0.85;
+}
+
+/* Keep the background dark */
+body.dark-mode {
+    background: #17151f !important;
+    background-image: none !important;
+}
+
+body.dark-mode #portfolioContent {
+    background: transparent !important;
+}
+
+/* Subtle pink blobs in dark mode */
+body.dark-mode .background-decoration .pink-blob {
+    opacity: 0.12;
+}
+
+
+/* Navigation - Dark Mode */
+body.dark-mode nav {
+    background: #211d2b !important;
+    border-bottom: 1px solid rgba(255, 182, 213, 0.2);
+}
+
+body.dark-mode nav a {
+    color: #ffffff !important;
+}
+
+body.dark-mode nav a:hover,
+body.dark-mode nav a.active {
+    color: #ffb6d5 !important;
+}
+
+body.dark-mode .theme-toggle {
+    color: #ffffff !important;
+    border-color: #f3a6c3;
+}
+
+body.dark-mode .theme-toggle:hover {
+    color: #ffb6d5 !important;
+}
+
+
+/* Certificate Modal - Dark Mode Fix */
+body.dark-mode .certificate-modal-box {
+    background: #211d2b !important;
+    color: #ffffff !important;
+}
+
+body.dark-mode .certificate-modal-box h3 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .certificate-modal-close {
+    color: #ffffff !important;
+}
+
+body.dark-mode .certificate-modal-close:hover {
+    color: #ffb6d5 !important;
+}

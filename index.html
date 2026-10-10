@@ -28,6 +28,9 @@
     <span class="sparkle sparkle-2">✧</span>
     <span class="sparkle sparkle-3">✦</span>
     <span class="sparkle sparkle-4">♡</span>
+    <div class="sparkle sparkle-5">✦</div>
+    <div class="sparkle sparkle-6">✧</div>
+    <div class="sparkle sparkle-7">✦</div>
 
     <span class="tech-symbol symbol-1">&lt;/&gt;</span>
     <span class="tech-symbol symbol-2">{ }</span>
@@ -54,17 +57,29 @@
 <!-- MAIN PORTFOLIO CONTENT -->
 <div id="portfolioContent">
 
-  <!-- NAV -->
-  <nav>
-    <a href="#home" class="logo"><span>L</span>M</a>
 
-    <div>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
+<!-- NAV -->
+<nav>
+  <a href="#home" class="logo"><span>L</span>M</a>
+
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+
+    <button
+      type="button"
+      id="themeToggle"
+      class="theme-toggle"
+      aria-label="Switch to dark mode"
+      title="Toggle dark mode"
+    >
+      <i class="fas fa-moon"></i>
+    </button>
+  </div>
+</nav>
+
 
   <!-- HERO -->
   <section class="hero" id="home">
@@ -495,6 +510,26 @@
                 <a href="images/CERT_5.png" target="_blank">View Certificate ↗</a>
             </div>
         </div>
+
+    </div>
+</div>
+
+<!-- CERTIFICATE MODAL -->
+<div id="certificateModal" class="certificate-modal">
+    <div class="certificate-modal-box">
+
+        <button
+            type="button"
+            class="certificate-modal-close"
+            id="closeCertificateModal"
+            aria-label="Close modal"
+        >
+            &times;
+        </button>
+
+        <img id="certificateModalImage" src="" alt="Certificate Preview">
+
+        <h3 id="certificateModalTitle"></h3>
 
     </div>
 </div>
