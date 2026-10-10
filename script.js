@@ -398,7 +398,43 @@ const hrisImages = [
         image: "images/HRIS_5.png",
         title: "Admin Interface",
         description: "The admin dashboard opens with a personalized greeting, the current date and time, a page refresher, live notifications, and a profile menu that houses settings, FAQs, a privacy policy, and the sign-out option. Key metrics are prominently displayed through stats covering total employees, today’s attendance, payroll processing status, payroll processed, payslips released, and upcoming leave features. Additionally, the interface features an announcement carousel, an interactive calendar with holidays, a comprehensive admin panel (managing users, payroll, leaves, DTRs, announcements, and holidays), task tracking, an overview section, analytics, and a general/admin management sidebar."
-    }
+    },
+    {
+        image: "images/HRIS_6.png",
+        title: "Daily Time Record",
+        description: "The Daily Time Record (DTR) feature is an automated filtering and viewing system that allows HR staff and employees to easily generate and view attendance records. By entering an Employee Number and selecting a specific Start Date and End Date, the system quickly filters and displays the required logs. It also features interactive quick-select month buttons for faster, hassle-free monthly record retrieval."
+    },
+    {
+        image: "images/HRIS_7.png",
+        title: "Attendance Records",
+        description: "The Attendance Records module provides a categorized tracking system tailored to distinct employment classifications: Non-Teaching, 30hrs / Job Order, and Designated personnel. Users can filter records by entering an Employee Number alongside custom Start and End Date ranges, or utilize quick-select monthly shortcut buttons for rapid query generation."
+    },
+    {
+        image: "images/HRIS_8.png",
+        title: "Attendance Records",
+        description: "Upon clicking search, the system generates a comprehensive, real-time data table showing the employee's detailed logs. It automatically maps out actual timestamps against scheduled shifts, tracking metrics such as actual and official Time IN/Breaktime IN, rendered hours, and computed tardiness. The view dynamically calculates overall totals for rendered time and tardiness across the selected period, and provides a Save Record functionality for seamless archival and HR report export."
+    },
+    {
+        image: "images/HRIS_9.png",
+        title: "Payroll Processing",
+        description: "Once attendance records are saved, the data seamlessly feeds into the Payroll Processing Module where employee compensation and statutory deductions such as Pag-IBIG, PhilHealth, GSIS/SSS, and withholding taxes are calculated. The dashboard provides real-time summary cards tracking metrics like total employees, processed vs. unprocessed records, and overall net salary figures. HR administrators can filter payroll data by Department, Status, Month, or Year, manage employee records with actionable status tags, and export computed payroll summaries directly to Excel for streamlined financial reporting and payslip generation."
+    },
+    {
+        image: "images/HRIS_10.png",
+        title: "Payroll Processed",
+        description: "This phase acts as a key verification layer in the Payroll Processed Module, allowing HR administrators to double-check and validate computed salaries, rates, and adjustments prior to final release. The screen displays finalized summary metrics such as Total Employees, Processed Records, and Total Net Salary figures and provides administrators with complete control to perform audit checks, toggle between pending or released statuses, and execute bulk processing using the Release Selected action."
+    },
+    {
+        image: "images/HRIS_11.png",
+        title: "Payroll Released",
+        description: "The Payroll Release Module serves as the final distribution stage where processed salary statements and generated payslips are officially issued to employees. HR administrators can review finalized financial summaries including Total Released records, Gross Salary, Net Salary, and exact Release Dates and trigger the automated Send Payslips action to deliver detailed payslip notifications directly to employees' email addresses."
+    },
+    {
+        image: "images/HRIS_12.png",
+        title: "User Management",
+        description: "The User Management Module provides a centralized control hub for managing user accounts, roles, and granular page access permissions. System administrators can monitor account distributions categorized into Superadmins, Administrators, and Staff Members while utilizing quick action controls like Grant Staff Access, Grant Admin Access, and Page Management. Featuring real-time search filtering, dynamic role assignment, and profile management tools, this administrative module ensures strict system security and proper Role-Based Access Control (RBAC) across the platform."
+    },
+    
 ];
 
 
