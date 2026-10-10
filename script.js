@@ -639,5 +639,29 @@ if (certificateModal && certificateModalImage &&
 })();
 
 
+/* ===== MOBILE HAMBURGER MENU ===== */
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
+
+if (hamburger && navLinks) {
+    hamburger.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("show");
+
+        hamburger.setAttribute("aria-expanded", isOpen);
+        hamburger.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation menu" : "Open navigation menu"
+        );
+    });
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("show");
+            hamburger.setAttribute("aria-expanded", "false");
+            hamburger.setAttribute("aria-label", "Open navigation menu");
+        });
+    });
+}
+
 
 typeEffect();

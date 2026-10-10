@@ -58,27 +58,45 @@
 <div id="portfolioContent">
 
 
+
+
 <!-- NAV -->
 <nav>
-  <a href="#home" class="logo"><span>L</span>M</a>
+    <a href="#home" class="logo"><span>L</span>M</a>
 
-  <div class="nav-links">
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#contact">Contact</a>
+    <div class="nav-actions">
+        <button
+            type="button"
+            id="themeToggle"
+            class="theme-toggle"
+            aria-label="Switch to dark mode"
+            title="Toggle dark mode"
+        >
+            <i class="fas fa-moon"></i>
+        </button>
 
-    <button
-      type="button"
-      id="themeToggle"
-      class="theme-toggle"
-      aria-label="Switch to dark mode"
-      title="Toggle dark mode"
-    >
-      <i class="fas fa-moon"></i>
-    </button>
-  </div>
+        <button
+            type="button"
+            id="hamburger"
+            class="hamburger"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+
+    <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </div>
 </nav>
+
+
 
 
   <!-- HERO -->
