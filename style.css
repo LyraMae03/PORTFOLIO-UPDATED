@@ -25,7 +25,7 @@ nav{
 }
 nav h1{color:var(--pink);}
 nav a{
-  color:#1f2937;
+  color:white;
   margin-left:25px;
   text-decoration:none;
   font-weight:500;
@@ -2136,3 +2136,79 @@ body.dark-mode .hamburger span {
         background: #211d2b !important;
     }
 }
+
+/* Navigation Text - Dark Mode */
+body.dark-mode nav .nav-links a {
+    color: #ffffff !important;
+}
+
+body.dark-mode nav .nav-links a:hover {
+    color: #ffb6d5 !important;
+}
+
+
+/* Top buttons */
+.page-controls {
+    max-width: 900px;
+    margin: 0 auto 15px;
+    padding: 0 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.page-controls a,
+.page-controls button {
+    display: inline-block;
+    padding: 10px 14px;
+    border: 1px solid #d6a0b5;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #374151;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.page-controls a:hover,
+.page-controls button:hover {
+    background: #f3c1cc;
+    color: #1f2937;
+}
+
+/* Dark mode changes the page background only */
+body.dark-mode {
+    background: #17151f;
+    transition: background 0.3s ease;
+}
+
+body.dark-mode .page-controls a,
+body.dark-mode .page-controls button {
+    background: #292432;
+    color: #ffffff;
+    border-color: #f3c1cc;
+}
+
+body.dark-mode .page-controls a:hover,
+body.dark-mode .page-controls button:hover {
+    background: #443244;
+}
+
+@media (max-width: 600px) {
+    .resume {
+        grid-template-columns: 1fr;
+        margin: 0 10px;
+    }
+
+    .page-controls {
+        margin: 0 10px 15px;
+    }
+
+    .left,
+    .right {
+        padding: 20px;
+    }
+}
+
